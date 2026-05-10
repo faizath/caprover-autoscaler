@@ -74,7 +74,7 @@ export async function fetchAndParseMetrics(
 
   for (const m of metrics) {
     const id = m.labels['id'];
-    if (!id || !id.startsWith('/docker/')) continue;
+    if (!id || !(id.startsWith('/docker/') || id.includes('/docker-'))) continue;
 
     const svcName = m.labels['container_label_com_docker_swarm_service_name'];
     if (!svcName) continue;
