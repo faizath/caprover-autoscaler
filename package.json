@@ -1,0 +1,21 @@
+{
+  "name": "caprover-autoscaler",
+  "version": "1.0.0",
+  "description": "Horizontal autoscaler for CapRover apps using cAdvisor Prometheus metrics",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node src/index.ts",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "axios": "^1.7.0",
+    "caprover-api": "^0.0.19"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.4.0"
+  }
+}
